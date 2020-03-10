@@ -1,6 +1,14 @@
 spring:
   application:
     name: user-service
+  cloud:
+    config:
+      override-none: true
+  rabbitmq:
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admin 
     
 sp:
   user-service:
@@ -21,14 +29,4 @@ management:
       exposure:
         include: refresh
         
-spring:
-  ......
-  cloud:
-    config:
-      override-none: true
-  rabbitmq:
-    host: 192.168.64.140
-    port: 5672
-    username: admin
-    password: admin
 
